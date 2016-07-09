@@ -1,6 +1,4 @@
-const kuromoji = require('kuromoji')
-const { analyse } = require('./lattice')
-const dicPath = __dirname + '/node_modules/kuromoji/dist/dict'
+const { analyse } = require('./analyser')
 
 const formatter = (node) => {
   return { 
