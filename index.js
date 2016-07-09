@@ -8,7 +8,10 @@ const formatter = (node) => {
   }
 }
 const calc = (costs) => {
-  // costs.count
+  const sum = costs.reduce( (prev, curr) => {
+    return prev + curr.cost
+  }, 0)
+  return sum / costs.length
 }
 const hujiko = (str) => {
   return analyse(str).then( ({tokenizer, lattice, bestPath}) => {
@@ -17,8 +20,10 @@ const hujiko = (str) => {
         prev: formatter(node.prev)
       })
     })
-    console.log(costs)
-    return costs    
+    return {
+      costs: costs,
+      calc: calc(costs)
+    }
   })
 }
 

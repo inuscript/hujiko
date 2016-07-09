@@ -14,7 +14,7 @@ import test from 'ava';
 function testFn(str){
   test(str, async t => {
     await hujiko(str).then( (cost) => {
-      console.log(cost)
+      console.log(str, cost.calc)
     })
   })
 }
