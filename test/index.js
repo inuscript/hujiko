@@ -1,15 +1,5 @@
 import test from 'ava';
-// import hujiko from '../index.js'
-
-// test('foo', t => {
-//   t.plan(1)
-//   console.log("a")
-//   
-//   hujiko("fuga", () => {
-//     console.log("zzz")
-//     t.pass();    
-//   })
-// });
+import hujiko from '../index.js'
 
 function testFn(str){
   test(str, async t => {
@@ -21,6 +11,9 @@ function testFn(str){
 
 const hujiko = require('../index.js')
 testFn('すもももももももものうち')
+testFn('あああああいいいいい')
+testFn('あいうえおかきくけこ')
+testFn('山手線小田急線京浜東北線')
 testFn("くぁｗせｄｒｆｔｇｙふじこｌｐ；＠：")
 testFn(`キーワードに誤字・脱字がないか確認します。
   別のキーワードを試してみます。

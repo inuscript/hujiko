@@ -7,7 +7,9 @@ const formatter = (node) => {
     surface_form: node.surface_form, 
   }
 }
+
 const calc = (costs) => {
+  console.log(costs)
   const sum = costs.reduce( (prev, curr) => {
     return prev + curr.cost
   }, 0)
